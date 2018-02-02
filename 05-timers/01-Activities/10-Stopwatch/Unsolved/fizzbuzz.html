@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+  </head>
+
+  <body>
+
+    <div id="main"></div>
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Script -->
+    <script type="text/javascript">
+
+      function numberLoop() {
+
+        for (var i = 0; i <= 100; i++) {
+
+          if ((i % 3 != 0) && (i % 5 != 0)) {
+            console.log(i);
+            $("#main").append("<p>" + i + "</p>");
+          } else if ((i % 3 === 0) && (i % 5 === 0)) {
+            console.log("FizzBuzz");
+            $("#main").append("<p>FizzBuzz</p>");
+
+          } else if (i % 3 === 0) {
+            console.log("Fizz");
+            $("#main").append("<p>Fizz</p>");
+
+          } else if (i % 5 === 0) {
+            console.log("Buzz");
+            $("#main").append("<p>Buzz</p>");
+
+          }
+        }
+
+
+      }
+
+      numberLoop();
+
+
+
+    </script>
+
+  </body>
+
+</html>

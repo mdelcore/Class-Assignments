@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Rock Paper Scissors Part 1</title>
+</head>
+
+<body>
+
+  <div id="game">
+
+  </div>
+
+  <script type="text/javascript">
+
+    var options = ["r", "p", "s"];
+    var wins = 0;
+    var losses = 0;
+    var ties = 0;
+
+    document.onkeyup = function() {
+      var userGuess = String.fromCharCode(event.keycode).
+          toLowerCase();
+
+          console.log(userGuess);
+      var computerGuess = options[Math.floor(Math.random())*options.length];
+
+          console.log(computerGuess);
+
+          if (userGuess === "r" || userGuess === "p" || userGuess === "s") {
+            if ((userGuess == "r") && (computerGuess == "s")) {
+              wins++;
+              alert("Wins: " + wins);
+            }
+            if ((userGuess == "r") && (computerGuess == "p")){
+              losses++;
+              alert("losses: " + losses);
+            }
+            if ((userGuess == "s") && (computerGuess == "p")){
+              losses++;
+              alert("losses: " + losses);
+            }
+            if ((userGuess == "p") && (computerGuess == "s")){
+              losses++;
+              alert("losses: " + losses);
+            }
+            if ((userGuess == "p") && (computerGuess == "r")){
+              losses++;
+              alert("losses: " + losses);
+            }if ((userGuess == computerGuess)){
+              ties++;
+              alert("Ties: " + ties);
+            }
+          }
+    };
+  </script>
+
+</body>
+
+</html>
